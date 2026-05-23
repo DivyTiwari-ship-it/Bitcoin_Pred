@@ -55,6 +55,6 @@ jupyter notebook Bitcoin_Prediction.ipynb
 ---
 
 ## 💡 Key Learnings
-- Moving Averages sabse important feature nikle
-- Imbalanced data handle karna zaroori tha
+- Moving Averages came as most important features
+- It's important to handle Imbalanced data 
 - XGBoost outperformed RandomForest
