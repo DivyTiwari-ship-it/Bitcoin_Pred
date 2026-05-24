@@ -1,39 +1,46 @@
-[BITCOIN_README.md](https://github.com/user-attachments/files/28179141/BITCOIN_README.md)
-# Bitcoin_Pred# 🪙 Bitcoin Price Prediction
+# 🪙 Bitcoin Price Prediction
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
 ![ML](https://img.shields.io/badge/ML-XGBoost-green)
-![Accuracy](https://img.shields.io/badge/Accuracy-78.69%25-brightgreen)
+![Accuracy](https://img.shields.io/badge/Accuracy-72.23%25-brightgreen)
 
 ## 📌 Overview
 Predict kiya ki next hour Bitcoin price **badhega ya girega** 
-using Machine Learning on 88,000+ historical records.
+using Machine Learning on hourly historical data.
+Model ko current live Bitcoin price pe bhi test kiya!
 
 ---
 
 ## 📊 Results
 | Model | Accuracy |
 |-------|----------|
-| Random Forest (baseline) | 74.60% |
-| Random Forest (tuned) | 76.68% |
-| **XGBoost ✅** | **78.69%** |
+| Random Forest (baseline) | 58.77% |
+| **XGBoost ✅** | **72.23%** |
 
 ---
 
 ## 🔧 Feature Engineering
 | Feature | Description |
 |---------|-------------|
-| MA_10 | 10 min moving average |
-| MA_30 | 30 min moving average |
-| MA_50 | 50 min moving average |
-| Momentum | Price change in 5 mins |
+| MA_10, MA_20, MA_30, MA_50 | Moving Averages |
+| RSI | Relative Strength Index |
+| BB_upper, BB_lower, BB_width | Bollinger Bands |
+| Momentum | Price change in 5 hours |
+| Volatility | Price std in 10 hours |
+| MA_diff | MA_10 - MA_30 |
+| price_change | % change per hour |
 
 ---
 
 ## 📈 Visualizations
-- Confusion Matrix
-- Feature Importance
-- Bitcoin Price — Model Predictions (Stock Chart)
+### Confusion Matrix
+![Confusion Matrix](images/confusion_matrix.png)
+
+### Feature Importance
+![Feature Importance](images/feature_importance.png)
+
+### Live Bitcoin Predictions
+![Live Predictions](images/live_predictions.png)
 
 ---
 
@@ -42,12 +49,13 @@ using Machine Learning on 88,000+ historical records.
 ![Pandas](https://img.shields.io/badge/-Pandas-black?logo=pandas)
 ![XGBoost](https://img.shields.io/badge/-XGBoost-black)
 ![Seaborn](https://img.shields.io/badge/-Seaborn-black)
+![yfinance](https://img.shields.io/badge/-yfinance-black)
 
 ---
 
 ## 🚀 How to Run
 ```bash
-git clone https://github.com/DivyTiwari-ship-it/ml-projects
+git clone https://github.com/DivyTiwari-ship-it/Bitcoin_Pred
 pip install -r requirements.txt
 jupyter notebook Bitcoin_Prediction.ipynb
 ```
@@ -55,6 +63,7 @@ jupyter notebook Bitcoin_Prediction.ipynb
 ---
 
 ## 💡 Key Learnings
-- Moving Averages came as most important features
-- It's important to handle Imbalanced data 
+- RSI aur Bollinger Bands ne accuracy improve ki
+- Bitcoin market inherently random hai — 72% without data leakage genuine hai
 - XGBoost outperformed RandomForest
+- Model current live Bitcoin price pe bhi predict kar sakta hai!
