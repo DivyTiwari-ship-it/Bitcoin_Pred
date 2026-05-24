@@ -32,15 +32,6 @@ Model ko current live Bitcoin price pe bhi test kiya!
 
 ---
 
-## 📈 Visualizations
-### Confusion Matrix
-![Confusion Matrix](images/confusion_matrix.png)
-
-### Feature Importance
-![Feature Importance](images/feature_importance.png)
-
-### Live Bitcoin Predictions
-![Live Predictions](images/live_predictions.png)
 
 ---
 
