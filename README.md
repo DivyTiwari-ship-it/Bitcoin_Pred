@@ -5,9 +5,10 @@
 ![Accuracy](https://img.shields.io/badge/Accuracy-72.23%25-brightgreen)
 
 ## 📌 Overview
-Predict kiya ki next hour Bitcoin price **badhega ya girega** 
-using Machine Learning on hourly historical data.
-Model ko current live Bitcoin price pe bhi test kiya!
+Predicted whether the Bitcoin price would **increase or decrease in the next hour**  
+using Machine Learning on hourly historical market data.
+
+The model was also tested on the current live Bitcoin price.
 
 ---
 
@@ -26,12 +27,9 @@ Model ko current live Bitcoin price pe bhi test kiya!
 | RSI | Relative Strength Index |
 | BB_upper, BB_lower, BB_width | Bollinger Bands |
 | Momentum | Price change in 5 hours |
-| Volatility | Price std in 10 hours |
+| Volatility | Price standard deviation in 10 hours |
 | MA_diff | MA_10 - MA_30 |
-| price_change | % change per hour |
-
----
-
+| price_change | Percentage change per hour |
 
 ---
 
@@ -47,14 +45,16 @@ Model ko current live Bitcoin price pe bhi test kiya!
 ## 🚀 How to Run
 ```bash
 git clone https://github.com/DivyTiwari-ship-it/Bitcoin_Pred
+
 pip install -r requirements.txt
+
 jupyter notebook Bitcoin_Prediction.ipynb
 ```
 
 ---
 
 ## 💡 Key Learnings
-- RSI aur Bollinger Bands ne accuracy improve ki
-- Bitcoin market inherently random hai — 72% without data leakage genuine hai
+- RSI and Bollinger Bands improved the model accuracy
+- Bitcoin markets are inherently random — achieving 72% accuracy without data leakage is meaningful
 - XGBoost outperformed RandomForest
-- Model current live Bitcoin price pe bhi predict kar sakta hai!
+- The model can also make predictions on live Bitcoin price data
